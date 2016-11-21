@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		149B26621DE24E72000DEDF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 149B26611DE24E72000DEDF0 /* GoogleService-Info.plist */; };
 		149B26651DE27215000DEDF0 /* MapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B26641DE27215000DEDF0 /* MapsViewController.m */; };
 		149FD95D1DE2431500CB1808 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD95C1DE2431500CB1808 /* LogInViewController.m */; };
 		149FD9601DE2434200CB1808 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD95F1DE2434200CB1808 /* SignInViewController.m */; };
@@ -17,10 +16,9 @@
 		14EAF2001DDE400A00874D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EAF1FE1DDE400A00874D28 /* Main.storyboard */; };
 		14EAF2021DDE400A00874D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EAF2011DDE400A00874D28 /* Assets.xcassets */; };
 		14EAF2051DDE400A00874D28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EAF2031DDE400A00874D28 /* LaunchScreen.storyboard */; };
-		14EAF2101DDE400B00874D28 /* whatsUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF20F1DDE400B00874D28 /* whatsUpTests.m */; };
-		14EAF21B1DDE400B00874D28 /* whatsUpUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF21A1DDE400B00874D28 /* whatsUpUITests.m */; };
 		404C5401C614BBF8A7077E2A /* Pods_whatsUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5AFB4BF2566059966B3948 /* Pods_whatsUp.framework */; };
 		48AE8A34A3027BF32A84D9A6 /* Pods_whatsUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF47BC8177C66F059BDFF3D /* Pods_whatsUpUITests.framework */; };
+		586F2B7A1DE3B232004B756F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 586F2B791DE3B232004B756F /* GoogleService-Info.plist */; };
 		BBF460FB4425ED99B8E51325 /* Pods_whatsUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7EF704B4178F07A49FEADD /* Pods_whatsUpTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		149B26611DE24E72000DEDF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		149B26631DE27215000DEDF0 /* MapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapsViewController.h; sourceTree = "<group>"; };
 		149B26641DE27215000DEDF0 /* MapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapsViewController.m; sourceTree = "<group>"; };
 		149FD95B1DE2431500CB1808 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
@@ -60,14 +57,11 @@
 		14EAF2041DDE400A00874D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14EAF2061DDE400A00874D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14EAF20B1DDE400B00874D28 /* whatsUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whatsUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14EAF20F1DDE400B00874D28 /* whatsUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = whatsUpTests.m; sourceTree = "<group>"; };
-		14EAF2111DDE400B00874D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14EAF2161DDE400B00874D28 /* whatsUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whatsUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		14EAF21A1DDE400B00874D28 /* whatsUpUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = whatsUpUITests.m; sourceTree = "<group>"; };
-		14EAF21C1DDE400B00874D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A7EF704B4178F07A49FEADD /* Pods_whatsUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatsUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD791B044CDE6D523787A06 /* Pods-whatsUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUpUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUpUITests/Pods-whatsUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		48BA6B589F9EF3634BA041BA /* Pods-whatsUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUp/Pods-whatsUp.release.xcconfig"; sourceTree = "<group>"; };
+		586F2B791DE3B232004B756F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		643BE7AB9BCB7260481DF19D /* Pods-whatsUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUpTests/Pods-whatsUpTests.release.xcconfig"; sourceTree = "<group>"; };
 		6717B3E5538EBEAE1AF1358E /* Pods-whatsUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUpTests/Pods-whatsUpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C220F9486B0A7DC4CEEB6DB /* Pods-whatsUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUp/Pods-whatsUp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -108,8 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				14EAF1F41DDE400A00874D28 /* whatsUp */,
-				14EAF20E1DDE400B00874D28 /* whatsUpTests */,
-				14EAF2191DDE400B00874D28 /* whatsUpUITests */,
 				14EAF1F31DDE400A00874D28 /* Products */,
 				B34425673F488278C30C017D /* Pods */,
 				CA7BD28DE14A0D2F56E6054A /* Frameworks */,
@@ -143,7 +135,7 @@
 				14EAF2011DDE400A00874D28 /* Assets.xcassets */,
 				14EAF2031DDE400A00874D28 /* LaunchScreen.storyboard */,
 				14EAF2061DDE400A00874D28 /* Info.plist */,
-				149B26611DE24E72000DEDF0 /* GoogleService-Info.plist */,
+				586F2B791DE3B232004B756F /* GoogleService-Info.plist */,
 				14EAF1F51DDE400A00874D28 /* Supporting Files */,
 			);
 			path = whatsUp;
@@ -155,24 +147,6 @@
 				14EAF1F61DDE400A00874D28 /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		14EAF20E1DDE400B00874D28 /* whatsUpTests */ = {
-			isa = PBXGroup;
-			children = (
-				14EAF20F1DDE400B00874D28 /* whatsUpTests.m */,
-				14EAF2111DDE400B00874D28 /* Info.plist */,
-			);
-			path = whatsUpTests;
-			sourceTree = "<group>";
-		};
-		14EAF2191DDE400B00874D28 /* whatsUpUITests */ = {
-			isa = PBXGroup;
-			children = (
-				14EAF21A1DDE400B00874D28 /* whatsUpUITests.m */,
-				14EAF21C1DDE400B00874D28 /* Info.plist */,
-			);
-			path = whatsUpUITests;
 			sourceTree = "<group>";
 		};
 		B34425673F488278C30C017D /* Pods */ = {
@@ -314,7 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14EAF2051DDE400A00874D28 /* LaunchScreen.storyboard in Resources */,
-				149B26621DE24E72000DEDF0 /* GoogleService-Info.plist in Resources */,
+				586F2B7A1DE3B232004B756F /* GoogleService-Info.plist in Resources */,
 				14EAF2021DDE400A00874D28 /* Assets.xcassets in Resources */,
 				14EAF2001DDE400A00874D28 /* Main.storyboard in Resources */,
 			);
@@ -492,7 +466,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EAF2101DDE400B00874D28 /* whatsUpTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -500,7 +473,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14EAF21B1DDE400B00874D28 /* whatsUpUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
