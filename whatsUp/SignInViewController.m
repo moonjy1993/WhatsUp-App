@@ -7,12 +7,42 @@
 //
 
 #import "SignInViewController.h"
+@import Firebase;
 
 @interface SignInViewController ()
+@property (strong, nonatomic) IBOutlet UITextField *emailSignIn;
+@property (strong, nonatomic) IBOutlet UITextField *passwordSignIn;
 
 @end
 
 @implementation SignInViewController
+
+//Sign Up an account with the user
+- (IBAction)signUp:(id)sender {
+    NSString *email = _emailSignIn.text;
+    NSString *password = _passwordSignIn.text;
+    [[FIRAuth auth] createUserWithEmail: email
+                               password: password
+                             completion: ^(FIRUser *_Nullable user, NSError * _Nullable error){
+                                 if(error){ //If there is an error with the email or password field
+                                     NSLog(@"%@", error.localizedDescription); //Get the error
+                                     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Oops" message:error.localizedDescription preferredStyle: UIAlertControllerStyleAlert]; //Output the error as a message to the user 
+                                     [alertController addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){   //An action will be associated with the error, to which the user can press ok
+                                     }]];
+                                     [self presentViewController:alertController animated:YES completion:nil]; //Show the alert
+                                     return;
+                                 }
+                                 else{  //If there is no error
+                                     NSLog(@"Success");
+                                     UIAlertController *sucess = [UIAlertController alertControllerWithTitle:@"Success" message:@"You made a new account!" preferredStyle:UIAlertControllerStyleAlert]; //Show a success message
+                                     [sucess addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){  //After user presses ok, the view will change to the log in view
+                                        [self dismissViewControllerAnimated:YES completion:nil];
+                                     }]];
+                                     [self presentViewController:sucess animated:YES completion:nil]; //Show the message
+                                }
+                            }];
+} //end of sign up
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];

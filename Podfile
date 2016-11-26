@@ -8,6 +8,7 @@ target 'whatsUp' do
   # Pods for whatsUp
     pod 'Firebase', '>=2.5.0'
     pod 'GoogleMaps'
+    pod 'Firebase/Auth'
 
   target 'whatsUpTests' do
     inherit! :search_paths
