@@ -17,6 +17,7 @@
 
 @implementation LogInViewController
 
+
 - (IBAction)logIn:(id)sender {
     NSString *email = _emailLogIn.text;
     NSString *password = _passwordLogIn.text;
@@ -42,8 +43,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
- 
     
+    //Checked if a user has already been logged in. If they are logged in, then show the map. 
+    FIRUser *user = [FIRAuth auth].currentUser;
+    if(user){
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+        UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"map"];
+        [self presentViewController:vc animated:YES completion:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

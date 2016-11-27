@@ -10,8 +10,10 @@
 @import Firebase;
 
 @interface SignInViewController ()
-@property (strong, nonatomic) IBOutlet UITextField *emailSignIn;
-@property (strong, nonatomic) IBOutlet UITextField *passwordSignIn;
+@property (weak, nonatomic) IBOutlet UITextField *emailSignIn;
+@property (weak, nonatomic) IBOutlet UITextField *passwordSignIn;
+@property (weak, nonatomic) IBOutlet UITextField *firstName;
+@property (weak, nonatomic) IBOutlet UITextField *lastName;
 
 @end
 

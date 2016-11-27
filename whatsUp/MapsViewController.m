@@ -8,50 +8,61 @@
 
 #import "MapsViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
+@import Firebase;
 
 @interface MapsViewController ()
 
 @end
 
 @implementation MapsViewController
-
+    
 - (void)viewDidLoad {
     [super viewDidLoad];
-    /*
+    
     // Do any additional setup after loading the view.
+    //Feel free to change this, I just needed to make sure the buttons can be on top of the map view
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone;
     
-    locationManager.desiredAccuracy = kCLLocationAccuracyKilometer;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     [locationManager startUpdatingLocation];
     
+    //Get the longitude and latitude
     double lat = locationManager.location.coordinate.latitude;
     double lon = locationManager.location.coordinate.longitude;
     
-    CLLocation *myLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
+    //CLLocation *myLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
     
+    //Specifies center and zoom level of map
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:lat longitude:lon zoom: 11.5];
     
-    //self.map
-     */
-    // Create a GMSCameraPosition that tells the map to display the
-    // coordinate -33.86,151.20 at zoom level 6.
-    
-    
-    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.86
-                                                            longitude:151.20
-                                                                 zoom:6];
-    GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    GMSMapView *mapView = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
     mapView.myLocationEnabled = YES;
-    self.view = mapView;
-    
-    // Creates a marker in the center of the map.
-    GMSMarker *marker = [[GMSMarker alloc] init];
-    marker.position = CLLocationCoordinate2DMake(-33.86, 151.20);
-    marker.title = @"Sydney";
-    marker.snippet = @"Australia";
-    marker.map = mapView;
+    [self.view insertSubview:mapView atIndex:0]; //Set the view controller's view to the map. Its at index 0, so the buttons can be on top of the map
 }
+
+
+//Signs out the current user
+- (IBAction)signOut:(id)sender {
+    NSError *error;
+    [[FIRAuth auth] signOut:&error];
+    if(!error){
+        //If user successfully logs out
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    else{
+        //Print out error
+        NSLog(@"Error: %@", error);
+        return;
+    }
+    
+}
+
+
+
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

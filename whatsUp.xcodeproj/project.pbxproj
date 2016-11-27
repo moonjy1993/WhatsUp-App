@@ -11,6 +11,7 @@
 		149FD95D1DE2431500CB1808 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD95C1DE2431500CB1808 /* LogInViewController.m */; };
 		149FD9601DE2434200CB1808 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD95F1DE2434200CB1808 /* SignInViewController.m */; };
 		14C215181DE3B22F00D6B116 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14C215171DE3B22F00D6B116 /* GoogleService-Info.plist */; };
+		14D648B11DEABAC800CCCD78 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D648B01DEABAC800CCCD78 /* FriendViewController.m */; };
 		14EAF1F71DDE400A00874D28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1F61DDE400A00874D28 /* main.m */; };
 		14EAF1FA1DDE400A00874D28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1F91DDE400A00874D28 /* AppDelegate.m */; };
 		14EAF1FD1DDE400A00874D28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1FC1DDE400A00874D28 /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		149FD95E1DE2434200CB1808 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		149FD95F1DE2434200CB1808 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		14C215171DE3B22F00D6B116 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14D648AF1DEABAC800CCCD78 /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
+		14D648B01DEABAC800CCCD78 /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
 		14EAF1F21DDE400A00874D28 /* whatsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14EAF1F61DDE400A00874D28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14EAF1F81DDE400A00874D28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,6 +133,8 @@
 				149FD95E1DE2434200CB1808 /* SignInViewController.h */,
 				149FD95F1DE2434200CB1808 /* SignInViewController.m */,
 				14EAF1FE1DDE400A00874D28 /* Main.storyboard */,
+				14D648AF1DEABAC800CCCD78 /* FriendViewController.h */,
+				14D648B01DEABAC800CCCD78 /* FriendViewController.m */,
 				149B26631DE27215000DEDF0 /* MapsViewController.h */,
 				149B26641DE27215000DEDF0 /* MapsViewController.m */,
 				14EAF2011DDE400A00874D28 /* Assets.xcassets */,
@@ -457,6 +462,7 @@
 				149FD95D1DE2431500CB1808 /* LogInViewController.m in Sources */,
 				14EAF1FD1DDE400A00874D28 /* ViewController.m in Sources */,
 				14EAF1FA1DDE400A00874D28 /* AppDelegate.m in Sources */,
+				14D648B11DEABAC800CCCD78 /* FriendViewController.m in Sources */,
 				14EAF1F71DDE400A00874D28 /* main.m in Sources */,
 				149B26651DE27215000DEDF0 /* MapsViewController.m in Sources */,
 			);
@@ -529,6 +535,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -576,6 +583,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
