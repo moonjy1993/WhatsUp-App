@@ -8,12 +8,13 @@
 
 #import "SignInViewController.h"
 @import Firebase;
+@import FirebaseDatabase;
 
 @interface SignInViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *emailSignIn;
 @property (weak, nonatomic) IBOutlet UITextField *passwordSignIn;
-@property (weak, nonatomic) IBOutlet UITextField *firstName;
-@property (weak, nonatomic) IBOutlet UITextField *lastName;
+@property (weak, nonatomic) IBOutlet UITextField *nameSignIn;
+
 
 @end
 
@@ -21,8 +22,14 @@
 
 //Sign Up an account with the user
 - (IBAction)signUp:(id)sender {
+    NSString *name = _nameSignIn.text;
     NSString *email = _emailSignIn.text;
     NSString *password = _passwordSignIn.text;
+    if(name == nil || email == nil || password == nil){
+        NSLog(@"%@", @"Invalid");
+        return;
+    }
+    
     [[FIRAuth auth] createUserWithEmail: email
                                password: password
                              completion: ^(FIRUser *_Nullable user, NSError * _Nullable error){
@@ -36,6 +43,23 @@
                                  }
                                  else{  //If there is no error
                                      NSLog(@"Success");
+                                     
+                                    //Link to Firebase Reference
+                                     FIRDatabaseReference *ref = [[FIRDatabase database] referenceFromURL:@"https://whatsup-d2a04.firebaseio.com/"];
+                                     FIRDatabaseReference *userRef = [[ref child:@"users"]child:user.uid];
+                                     NSDictionary *values = @{ @"name": name,
+                                                               @"email": email};
+                                     [userRef updateChildValues:values withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
+                                         if(error){
+                                             NSLog(@"Error");
+                                             return;
+                                         }
+                                         
+                                         NSLog(@"Success");
+                                         
+                                     }];
+                                     
+                                     
                                      UIAlertController *sucess = [UIAlertController alertControllerWithTitle:@"Success" message:@"You made a new account!" preferredStyle:UIAlertControllerStyleAlert]; //Show a success message
                                      [sucess addAction:[UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){  //After user presses ok, the view will change to the log in view
                                         [self dismissViewControllerAnimated:YES completion:nil];

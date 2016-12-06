@@ -10,17 +10,18 @@
 		149B26651DE27215000DEDF0 /* MapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B26641DE27215000DEDF0 /* MapsViewController.m */; };
 		149FD95D1DE2431500CB1808 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD95C1DE2431500CB1808 /* LogInViewController.m */; };
 		149FD9601DE2434200CB1808 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD95F1DE2434200CB1808 /* SignInViewController.m */; };
+		14A8918E1DF6070500E4DEC6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A8918D1DF6070500E4DEC6 /* User.m */; };
+		14AF0EE71DF511CF00226F54 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF0EE61DF511CF00226F54 /* FriendViewController.m */; };
 		14C215181DE3B22F00D6B116 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14C215171DE3B22F00D6B116 /* GoogleService-Info.plist */; };
-		14D648B11DEABAC800CCCD78 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D648B01DEABAC800CCCD78 /* FriendViewController.m */; };
 		14EAF1F71DDE400A00874D28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1F61DDE400A00874D28 /* main.m */; };
 		14EAF1FA1DDE400A00874D28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1F91DDE400A00874D28 /* AppDelegate.m */; };
 		14EAF1FD1DDE400A00874D28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1FC1DDE400A00874D28 /* ViewController.m */; };
 		14EAF2001DDE400A00874D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EAF1FE1DDE400A00874D28 /* Main.storyboard */; };
 		14EAF2021DDE400A00874D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EAF2011DDE400A00874D28 /* Assets.xcassets */; };
 		14EAF2051DDE400A00874D28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EAF2031DDE400A00874D28 /* LaunchScreen.storyboard */; };
-		404C5401C614BBF8A7077E2A /* Pods_whatsUp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF5AFB4BF2566059966B3948 /* Pods_whatsUp.framework */; };
-		48AE8A34A3027BF32A84D9A6 /* Pods_whatsUpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF47BC8177C66F059BDFF3D /* Pods_whatsUpUITests.framework */; };
-		BBF460FB4425ED99B8E51325 /* Pods_whatsUpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A7EF704B4178F07A49FEADD /* Pods_whatsUpTests.framework */; };
+		15F5CBD4D781F4DEE9933157 /* libPods-whatsUp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF20F41E0EBC4A7AF4CEDDE4 /* libPods-whatsUp.a */; };
+		684FA20418DF20BB7ABB68E9 /* libPods-whatsUpUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DDE26851D55512F7EA9BEF /* libPods-whatsUpUITests.a */; };
+		BB1DCF9955482177E6CC973F /* libPods-whatsUpTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30ECC6EE88C2B39C368B6D0F /* libPods-whatsUpTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +48,11 @@
 		149FD95C1DE2431500CB1808 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		149FD95E1DE2434200CB1808 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
 		149FD95F1DE2434200CB1808 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
+		14A8918C1DF6070500E4DEC6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		14A8918D1DF6070500E4DEC6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		14AF0EE51DF511CF00226F54 /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
+		14AF0EE61DF511CF00226F54 /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
 		14C215171DE3B22F00D6B116 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		14D648AF1DEABAC800CCCD78 /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
-		14D648B01DEABAC800CCCD78 /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
 		14EAF1F21DDE400A00874D28 /* whatsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14EAF1F61DDE400A00874D28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14EAF1F81DDE400A00874D28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,14 +65,14 @@
 		14EAF2061DDE400A00874D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14EAF20B1DDE400B00874D28 /* whatsUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whatsUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14EAF2161DDE400B00874D28 /* whatsUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whatsUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A7EF704B4178F07A49FEADD /* Pods_whatsUpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatsUpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16DDE26851D55512F7EA9BEF /* libPods-whatsUpUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-whatsUpUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD791B044CDE6D523787A06 /* Pods-whatsUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUpUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUpUITests/Pods-whatsUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		30ECC6EE88C2B39C368B6D0F /* libPods-whatsUpTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-whatsUpTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48BA6B589F9EF3634BA041BA /* Pods-whatsUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUp/Pods-whatsUp.release.xcconfig"; sourceTree = "<group>"; };
 		643BE7AB9BCB7260481DF19D /* Pods-whatsUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUpTests/Pods-whatsUpTests.release.xcconfig"; sourceTree = "<group>"; };
 		6717B3E5538EBEAE1AF1358E /* Pods-whatsUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUpTests/Pods-whatsUpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C220F9486B0A7DC4CEEB6DB /* Pods-whatsUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUp/Pods-whatsUp.debug.xcconfig"; sourceTree = "<group>"; };
-		8AF47BC8177C66F059BDFF3D /* Pods_whatsUpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatsUpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF5AFB4BF2566059966B3948 /* Pods_whatsUp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whatsUp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF20F41E0EBC4A7AF4CEDDE4 /* libPods-whatsUp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-whatsUp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D37209F85302E6F3C4902A8F /* Pods-whatsUpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUpUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUpUITests/Pods-whatsUpUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -78,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				404C5401C614BBF8A7077E2A /* Pods_whatsUp.framework in Frameworks */,
+				15F5CBD4D781F4DEE9933157 /* libPods-whatsUp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBF460FB4425ED99B8E51325 /* Pods_whatsUpTests.framework in Frameworks */,
+				BB1DCF9955482177E6CC973F /* libPods-whatsUpTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48AE8A34A3027BF32A84D9A6 /* Pods_whatsUpUITests.framework in Frameworks */,
+				684FA20418DF20BB7ABB68E9 /* libPods-whatsUpUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +136,10 @@
 				149FD95E1DE2434200CB1808 /* SignInViewController.h */,
 				149FD95F1DE2434200CB1808 /* SignInViewController.m */,
 				14EAF1FE1DDE400A00874D28 /* Main.storyboard */,
-				14D648AF1DEABAC800CCCD78 /* FriendViewController.h */,
-				14D648B01DEABAC800CCCD78 /* FriendViewController.m */,
+				14AF0EE51DF511CF00226F54 /* FriendViewController.h */,
+				14AF0EE61DF511CF00226F54 /* FriendViewController.m */,
+				14A8918C1DF6070500E4DEC6 /* User.h */,
+				14A8918D1DF6070500E4DEC6 /* User.m */,
 				149B26631DE27215000DEDF0 /* MapsViewController.h */,
 				149B26641DE27215000DEDF0 /* MapsViewController.m */,
 				14EAF2011DDE400A00874D28 /* Assets.xcassets */,
@@ -170,9 +175,9 @@
 		CA7BD28DE14A0D2F56E6054A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AF5AFB4BF2566059966B3948 /* Pods_whatsUp.framework */,
-				2A7EF704B4178F07A49FEADD /* Pods_whatsUpTests.framework */,
-				8AF47BC8177C66F059BDFF3D /* Pods_whatsUpUITests.framework */,
+				BF20F41E0EBC4A7AF4CEDDE4 /* libPods-whatsUp.a */,
+				30ECC6EE88C2B39C368B6D0F /* libPods-whatsUpTests.a */,
+				16DDE26851D55512F7EA9BEF /* libPods-whatsUpUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -458,11 +463,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A8918E1DF6070500E4DEC6 /* User.m in Sources */,
 				149FD9601DE2434200CB1808 /* SignInViewController.m in Sources */,
 				149FD95D1DE2431500CB1808 /* LogInViewController.m in Sources */,
 				14EAF1FD1DDE400A00874D28 /* ViewController.m in Sources */,
 				14EAF1FA1DDE400A00874D28 /* AppDelegate.m in Sources */,
-				14D648B11DEABAC800CCCD78 /* FriendViewController.m in Sources */,
+				14AF0EE71DF511CF00226F54 /* FriendViewController.m in Sources */,
 				14EAF1F71DDE400A00874D28 /* main.m in Sources */,
 				149B26651DE27215000DEDF0 /* MapsViewController.m in Sources */,
 			);
