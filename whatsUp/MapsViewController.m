@@ -19,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+  //  [self.navigationController.navigationBar setFrame:CGRectMake(0, 0, self.view.frame.size.width,100.0)];
     // Do any additional setup after loading the view.
     //Feel free to change this, I just needed to make sure the buttons can be on top of the map view
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];

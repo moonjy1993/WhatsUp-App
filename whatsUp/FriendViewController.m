@@ -7,12 +7,14 @@
 //
 
 #import "FriendViewController.h"
+#import "User.h"
 @import Firebase;
 @import FirebaseDatabase;
 
 @interface FriendViewController ()
 
-@property (strong, nonatomic) NSMutableArray<FIRDataSnapshot *> *user;
+@property (strong, nonatomic) NSMutableArray *users;
+@property (strong, nonatomic) User *user;
 
 @end
 
@@ -25,16 +27,22 @@
     [super viewDidLoad];
     
     
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
 
+    //This creates the "Back" button in the table view
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backBtnClicked:)];
+    //This shows the back button in the left side of the navigation
      self.navigationItem.leftBarButtonItem = backButton;
-     self.navigationItem.title = @"Friend List";
-    
-    [self getUsers];
+    //Title of navigation
+     self.navigationItem.title = @"Member List";
+     self.navigationController.navigationBar.barTintColor = [UIColor colorWithWhite:0.200 alpha:1.000];
+    _users = [[NSMutableArray alloc] init];
+    [self getUsers]; //Calls method
 }
 
+//When back button is clicked, the view is dismissed
 -(IBAction)backBtnClicked:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -46,40 +54,58 @@
 }
 
 
-
+//Method to retreive the email and names of users in the firebase
 - (void)getUsers{
     
+    //Get the child nodes of User
     [[[[FIRDatabase database] reference]child:@"users"]observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
+        
+        //Store the snapshot value into the dicitionary
         NSDictionary *dict = snapshot.value;
-        
-        
-    } withCancelBlock:^(NSError * _Nonnull error) {
+        _user = [[User alloc] init];
+    
+        //The information is separated into name and email in user
+        [_user setValuesForKeysWithDictionary:dict];
+
+        //The user is stored into the array
+        [_users addObject: _user];
+    
+        //Reloads the table
+        dispatch_async(dispatch_get_main_queue(),^{
+            self.tableView.reloadData;
+        });
     }];
 }
 
 #pragma mark - Table view data source
 
-
+//Default is 1 section
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
-    return 0;
+    return 1;
 }
 
+//Returns the number in the User array, aka should be the amount of users in the firebase
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return [_users count];
 }
 
-/*
+//Displays the cells for the table
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-  //  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"reuseIdentifier" forIndexPath:indexPath];
     
-    //testing
-    //UITableViewCell *cell = [tableView reuseI]
-
+    //Dequeue is more memory efficient
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"thecell" forIndexPath:indexPath];
+    
+    //Gets the value of user at specific rows
+    User *userSnapshot = _users[indexPath.row];
+    
+    //Display the name as title and email as subtitle
+    cell.textLabel.text= userSnapshot.name;
+    cell.detailTextLabel.text = userSnapshot.email;
+    
     // Configure the cell...
     return cell;
 }
-
+/*
 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
