@@ -14,20 +14,20 @@ static NSMutableArray *checkInArray;
 @interface CheckIn : NSObject <MKAnnotation>{
 }
 @property (nonatomic,assign)CLLocationCoordinate2D coordinate;
-@property NSString *User, *title, *Image;
+@property NSString *subtitle, *title, *Image;
 
 
 
 
 +(BOOL) initArray;
 +(BOOL) CheckInitiated;
-+(CheckIn*) checkInfoWithUser: (NSString *) User
++(CheckIn*) checkInfoWithsubtitle: (NSString *) subtitle
                      withtitle: (NSString*) title
                     withImage: (NSString *) Image
                withCoordinate:  (CLLocationCoordinate2D) coordinate;
 
 
--(CheckIn*) initWithUser:(NSString *) User
+-(CheckIn*) initWithsubtitle:(NSString *) subtitle
                 withtitle: (NSString*) title
                withImage: (NSString *) Image
                 withCoordinate:  (CLLocationCoordinate2D) coordinate;;

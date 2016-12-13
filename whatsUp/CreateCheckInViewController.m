@@ -7,11 +7,16 @@
 //
 
 #import "CreateCheckInViewController.h"
-
+#import "CheckIn.h"
 @interface CreateCheckInViewController ()
 @property (strong, nonatomic) UIAlertController *alertCtrl;
 @property (weak, nonatomic) IBOutlet UIButton *imageForUpload;
+@property (weak, nonatomic) IBOutlet UITextField *text;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
+
+@property (weak, nonatomic) UIImage *image;
 @end
 
 @implementation CreateCheckInViewController
@@ -22,8 +27,52 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupAlertCtrl];
-    // Do any additional setup after loading the view.
+    [self GetCurrentLocation_WithBlock:^{
+        NSLog(@"Lat ::%f,Long ::%f",[self.current_Lat floatValue],[self.current_Long floatValue]);
+    }];
 }
+- (IBAction)EnterPressed:(id)sender {
+    NSDate * now = [NSDate date];
+     NSString *time = [NSDateFormatter localizedStringFromDate:now
+     dateStyle:NSDateFormatterNoStyle
+     timeStyle:NSDateFormatterShortStyle];
+  
+    [CheckIn Add_Item: [CheckIn checkInfoWithsubtitle:time withtitle:self.text withImage:@"dessert.jpeg" withCoordinate:_coordinate]];
+     [self dismissViewControllerAnimated:YES completion:nil];
+   
+}
+
+#pragma mark - CLLocationManager
+-(void)GetCurrentLocation_WithBlock:(void(^)())block {
+    self._locationBlock = block;
+    _locationManager = [[CLLocationManager alloc] init];
+    [_locationManager setDelegate:self];
+    [_locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [_locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    
+        if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+            [_locationManager requestWhenInUseAuthorization];
+            [_locationManager requestAlwaysAuthorization];
+        }
+    
+    [_locationManager startUpdatingLocation];
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation *currentLoc=[locations objectAtIndex:0];
+    _coordinate=currentLoc.coordinate;
+    _current_Lat = [NSString stringWithFormat:@"%f",currentLoc.coordinate.latitude];
+    _current_Long = [NSString stringWithFormat:@"%f",currentLoc.coordinate.longitude];
+    NSLog(@"here lat %@ and here long %@",_current_Lat,_current_Long);
+    self._locationBlock();
+    [_locationManager stopUpdatingLocation];
+    _locationManager = nil;
+}
+
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error {
+}
+
 - (IBAction)uploadPhoto:(UIButton *)sender {
      [self presentViewController:self.alertCtrl animated:YES completion:nil];
 }
@@ -99,7 +148,8 @@
 {
     NSData *dataImage = UIImageJPEGRepresentation([info objectForKey:@"UIImagePickerControllerOriginalImage"],1);
     UIImage *img = [[UIImage alloc] initWithData:dataImage];
-  //  [self.imageView setImage:img];
+    self.image= img;
+   [self.imageView setImage:img];
     [self.imagePicker dismissViewControllerAnimated:YES completion:nil];
     
 }
