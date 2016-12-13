@@ -7,6 +7,7 @@
 //
 
 #import "FriendViewController.h"
+#import "PeopleViewController.h"
 #import "User.h"
 @import Firebase;
 @import FirebaseDatabase;
@@ -26,17 +27,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
 
     //This creates the "Back" button in the table view
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backBtnClicked:)];
+    UIBarButtonItem *friendButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addFrdClicked:)];
     //This shows the back button in the left side of the navigation
-     self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationItem.leftBarButtonItem = backButton;
+    self.navigationItem.rightBarButtonItem = friendButton;
+    
     //Title of navigation
-     self.navigationItem.title = @"Member List";
+     self.navigationItem.title = @"Friends";
      self.navigationController.navigationBar.barTintColor = [UIColor colorWithWhite:0.200 alpha:1.000];
     _users = [[NSMutableArray alloc] init];
     [self getUsers]; //Calls method
@@ -46,8 +48,14 @@
 -(IBAction)backBtnClicked:(id)sender{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-                                                                                                                                    
-                                                                                                                                    
+
+
+-(IBAction)addFrdClicked:(id)sender{
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    PeopleViewController *pc = [storyboard instantiateViewControllerWithIdentifier:@"people"];
+    [self.navigationController pushViewController:pc animated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -59,22 +67,23 @@
     
     //Get the child nodes of User
     [[[[FIRDatabase database] reference]child:@"users"]observeEventType:FIRDataEventTypeChildAdded withBlock:^(FIRDataSnapshot * _Nonnull snapshot) {
-        
+    
         //Store the snapshot value into the dicitionary
         NSDictionary *dict = snapshot.value;
         _user = [[User alloc] init];
-    
+        
         //The information is separated into name and email in user
         [_user setValuesForKeysWithDictionary:dict];
-
+        
         //The user is stored into the array
         [_users addObject: _user];
-    
+        
         //Reloads the table
         dispatch_async(dispatch_get_main_queue(),^{
             self.tableView.reloadData;
         });
     }];
+     
 }
 
 #pragma mark - Table view data source

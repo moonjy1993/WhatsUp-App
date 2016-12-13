@@ -7,6 +7,7 @@
 //
 
 #import "LogInViewController.h"
+#import <AVFoundation/AVFoundation.h>
 @import Firebase;
 
 @interface LogInViewController ()
@@ -51,12 +52,50 @@
         UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"map"];
         [self presentViewController:vc animated:YES completion:nil];
     }
+
+    NSString *path = [NSString stringWithFormat:@"%@/organ_music.mp3", [[NSBundle mainBundle] resourcePath]];
+    NSURL *soundURL = [NSURL fileURLWithPath:path];
+    NSError *error;
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:&error];
+    audioPlayer.numberOfLoops = -1;
+    
+    if(audioPlayer == nil){
+        NSLog(@"%@", [error description]);
+    }
+    else{
+        [audioPlayer play];
+    }
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(enteredBackground:)
+                                                name:UIApplicationDidEnterBackgroundNotification
+                                              object:nil];
+    
+    [[NSNotificationCenter defaultCenter]addObserver:self
+                                            selector:@selector(enteredForeground:)
+                                                name:UIApplicationWillEnterForegroundNotification
+                                              object:nil];
+
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void) viewWillDisappear:(BOOL)animated{
+    [audioPlayer stop];
+}
+
+- (void) enteredBackground: (NSNotification*)notif{
+    [audioPlayer stop];
+}
+
+- (void) enteredForeground: (NSNotification*)notif{
+    [audioPlayer play];
+}
+
 
 /*
 #pragma mark - Navigation

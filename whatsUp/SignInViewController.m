@@ -25,6 +25,8 @@
     NSString *name = _nameSignIn.text;
     NSString *email = _emailSignIn.text;
     NSString *password = _passwordSignIn.text;
+    
+    
     if(name == nil || email == nil || password == nil){
         NSLog(@"%@", @"Invalid");
         return;
@@ -48,7 +50,8 @@
                                      FIRDatabaseReference *ref = [[FIRDatabase database] referenceFromURL:@"https://whatsup-d2a04.firebaseio.com/"];
                                      FIRDatabaseReference *userRef = [[ref child:@"users"]child:user.uid];
                                      NSDictionary *values = @{ @"name": name,
-                                                               @"email": email};
+                                                               @"email": email
+                                                               };
                                      [userRef updateChildValues:values withCompletionBlock:^(NSError * _Nullable error, FIRDatabaseReference * _Nonnull ref) {
                                          if(error){
                                              NSLog(@"Error");

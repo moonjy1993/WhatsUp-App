@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1450FC9C1DFE0E2900565590 /* organ_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1450FC9B1DFE0E2900565590 /* organ_music.mp3 */; };
+		1450FC9F1DFF220200565590 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1450FC9D1DFF220200565590 /* Main.storyboard */; };
+		1481D2251DFA97AC00EB74C1 /* PeopleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1481D2241DFA97AC00EB74C1 /* PeopleViewController.m */; };
 		149B26651DE27215000DEDF0 /* MapsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149B26641DE27215000DEDF0 /* MapsViewController.m */; };
 		149FD95D1DE2431500CB1808 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD95C1DE2431500CB1808 /* LogInViewController.m */; };
 		149FD9601DE2434200CB1808 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD95F1DE2434200CB1808 /* SignInViewController.m */; };
@@ -16,7 +19,6 @@
 		14EAF1F71DDE400A00874D28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1F61DDE400A00874D28 /* main.m */; };
 		14EAF1FA1DDE400A00874D28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1F91DDE400A00874D28 /* AppDelegate.m */; };
 		14EAF1FD1DDE400A00874D28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1FC1DDE400A00874D28 /* ViewController.m */; };
-		14EAF2001DDE400A00874D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EAF1FE1DDE400A00874D28 /* Main.storyboard */; };
 		14EAF2021DDE400A00874D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EAF2011DDE400A00874D28 /* Assets.xcassets */; };
 		14EAF2051DDE400A00874D28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EAF2031DDE400A00874D28 /* LaunchScreen.storyboard */; };
 		15F5CBD4D781F4DEE9933157 /* libPods-whatsUp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF20F41E0EBC4A7AF4CEDDE4 /* libPods-whatsUp.a */; };
@@ -42,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1450FC9B1DFE0E2900565590 /* organ_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = organ_music.mp3; path = ../../../../../Downloads/organ_music.mp3; sourceTree = "<group>"; };
+		1450FC9E1DFF220200565590 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1481D2231DFA97AC00EB74C1 /* PeopleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeopleViewController.h; sourceTree = "<group>"; };
+		1481D2241DFA97AC00EB74C1 /* PeopleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeopleViewController.m; sourceTree = "<group>"; };
 		149B26631DE27215000DEDF0 /* MapsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapsViewController.h; sourceTree = "<group>"; };
 		149B26641DE27215000DEDF0 /* MapsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapsViewController.m; sourceTree = "<group>"; };
 		149FD95B1DE2431500CB1808 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
@@ -59,7 +65,6 @@
 		14EAF1F91DDE400A00874D28 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		14EAF1FB1DDE400A00874D28 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		14EAF1FC1DDE400A00874D28 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		14EAF1FF1DDE400A00874D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14EAF2011DDE400A00874D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14EAF2041DDE400A00874D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14EAF2061DDE400A00874D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -104,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1450FC9A1DFE0E1C00565590 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				1450FC9B1DFE0E2900565590 /* organ_music.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		14EAF1E91DDE400A00874D28 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +140,7 @@
 		14EAF1F41DDE400A00874D28 /* whatsUp */ = {
 			isa = PBXGroup;
 			children = (
+				1450FC9A1DFE0E1C00565590 /* Sounds */,
 				14EAF1F81DDE400A00874D28 /* AppDelegate.h */,
 				14EAF1F91DDE400A00874D28 /* AppDelegate.m */,
 				14EAF1FB1DDE400A00874D28 /* ViewController.h */,
@@ -135,9 +149,11 @@
 				149FD95C1DE2431500CB1808 /* LogInViewController.m */,
 				149FD95E1DE2434200CB1808 /* SignInViewController.h */,
 				149FD95F1DE2434200CB1808 /* SignInViewController.m */,
-				14EAF1FE1DDE400A00874D28 /* Main.storyboard */,
+				1481D2231DFA97AC00EB74C1 /* PeopleViewController.h */,
+				1481D2241DFA97AC00EB74C1 /* PeopleViewController.m */,
 				14AF0EE51DF511CF00226F54 /* FriendViewController.h */,
 				14AF0EE61DF511CF00226F54 /* FriendViewController.m */,
+				1450FC9D1DFF220200565590 /* Main.storyboard */,
 				14A8918C1DF6070500E4DEC6 /* User.h */,
 				14A8918D1DF6070500E4DEC6 /* User.m */,
 				149B26631DE27215000DEDF0 /* MapsViewController.h */,
@@ -298,9 +314,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				14EAF2051DDE400A00874D28 /* LaunchScreen.storyboard in Resources */,
+				1450FC9F1DFF220200565590 /* Main.storyboard in Resources */,
 				14C215181DE3B22F00D6B116 /* GoogleService-Info.plist in Resources */,
 				14EAF2021DDE400A00874D28 /* Assets.xcassets in Resources */,
-				14EAF2001DDE400A00874D28 /* Main.storyboard in Resources */,
+				1450FC9C1DFE0E2900565590 /* organ_music.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +483,7 @@
 				14A8918E1DF6070500E4DEC6 /* User.m in Sources */,
 				149FD9601DE2434200CB1808 /* SignInViewController.m in Sources */,
 				149FD95D1DE2431500CB1808 /* LogInViewController.m in Sources */,
+				1481D2251DFA97AC00EB74C1 /* PeopleViewController.m in Sources */,
 				14EAF1FD1DDE400A00874D28 /* ViewController.m in Sources */,
 				14EAF1FA1DDE400A00874D28 /* AppDelegate.m in Sources */,
 				14AF0EE71DF511CF00226F54 /* FriendViewController.m in Sources */,
@@ -504,10 +522,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		14EAF1FE1DDE400A00874D28 /* Main.storyboard */ = {
+		1450FC9D1DFF220200565590 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				14EAF1FF1DDE400A00874D28 /* Base */,
+				1450FC9E1DFF220200565590 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
