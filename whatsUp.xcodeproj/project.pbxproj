@@ -15,18 +15,13 @@
 		149FD9601DE2434200CB1808 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 149FD95F1DE2434200CB1808 /* SignInViewController.m */; };
 		14A8918E1DF6070500E4DEC6 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A8918D1DF6070500E4DEC6 /* User.m */; };
 		14AF0EE71DF511CF00226F54 /* FriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AF0EE61DF511CF00226F54 /* FriendViewController.m */; };
+		14C215181DE3B22F00D6B116 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14C215171DE3B22F00D6B116 /* GoogleService-Info.plist */; };
 		14EAF1F71DDE400A00874D28 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1F61DDE400A00874D28 /* main.m */; };
 		14EAF1FA1DDE400A00874D28 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1F91DDE400A00874D28 /* AppDelegate.m */; };
 		14EAF1FD1DDE400A00874D28 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14EAF1FC1DDE400A00874D28 /* ViewController.m */; };
 		14EAF2021DDE400A00874D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14EAF2011DDE400A00874D28 /* Assets.xcassets */; };
 		14EAF2051DDE400A00874D28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14EAF2031DDE400A00874D28 /* LaunchScreen.storyboard */; };
 		15F5CBD4D781F4DEE9933157 /* libPods-whatsUp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF20F41E0EBC4A7AF4CEDDE4 /* libPods-whatsUp.a */; };
-		587CD3681DFF806400B6D9E7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 587CD3671DFF806400B6D9E7 /* GoogleService-Info.plist */; };
-		587CD36A1DFF823400B6D9E7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 587CD3691DFF823400B6D9E7 /* MapKit.framework */; };
-		587CD36D1DFF827400B6D9E7 /* CheckIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 587CD36C1DFF827400B6D9E7 /* CheckIn.m */; };
-		587CD3701DFF837700B6D9E7 /* ImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 587CD36F1DFF837700B6D9E7 /* ImageViewController.m */; };
-		587CD3731DFF838400B6D9E7 /* URLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 587CD3721DFF838400B6D9E7 /* URLViewController.m */; };
-		587CD3761DFF866C00B6D9E7 /* CreateCheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 587CD3751DFF866C00B6D9E7 /* CreateCheckInViewController.m */; };
 		684FA20418DF20BB7ABB68E9 /* libPods-whatsUpUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16DDE26851D55512F7EA9BEF /* libPods-whatsUpUITests.a */; };
 		BB1DCF9955482177E6CC973F /* libPods-whatsUpTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30ECC6EE88C2B39C368B6D0F /* libPods-whatsUpTests.a */; };
 /* End PBXBuildFile section */
@@ -63,6 +58,7 @@
 		14A8918D1DF6070500E4DEC6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		14AF0EE51DF511CF00226F54 /* FriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendViewController.h; sourceTree = "<group>"; };
 		14AF0EE61DF511CF00226F54 /* FriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendViewController.m; sourceTree = "<group>"; };
+		14C215171DE3B22F00D6B116 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14EAF1F21DDE400A00874D28 /* whatsUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whatsUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14EAF1F61DDE400A00874D28 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14EAF1F81DDE400A00874D28 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,16 +74,6 @@
 		2DD791B044CDE6D523787A06 /* Pods-whatsUpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUpUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUpUITests/Pods-whatsUpUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		30ECC6EE88C2B39C368B6D0F /* libPods-whatsUpTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-whatsUpTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		48BA6B589F9EF3634BA041BA /* Pods-whatsUp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUp.release.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUp/Pods-whatsUp.release.xcconfig"; sourceTree = "<group>"; };
-		587CD3671DFF806400B6D9E7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
-		587CD3691DFF823400B6D9E7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		587CD36B1DFF827400B6D9E7 /* CheckIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckIn.h; sourceTree = "<group>"; };
-		587CD36C1DFF827400B6D9E7 /* CheckIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckIn.m; sourceTree = "<group>"; };
-		587CD36E1DFF837700B6D9E7 /* ImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageViewController.h; sourceTree = "<group>"; };
-		587CD36F1DFF837700B6D9E7 /* ImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageViewController.m; sourceTree = "<group>"; };
-		587CD3711DFF838400B6D9E7 /* URLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URLViewController.h; sourceTree = "<group>"; };
-		587CD3721DFF838400B6D9E7 /* URLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLViewController.m; sourceTree = "<group>"; };
-		587CD3741DFF866C00B6D9E7 /* CreateCheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateCheckInViewController.h; sourceTree = "<group>"; };
-		587CD3751DFF866C00B6D9E7 /* CreateCheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateCheckInViewController.m; sourceTree = "<group>"; };
 		643BE7AB9BCB7260481DF19D /* Pods-whatsUpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUpTests/Pods-whatsUpTests.release.xcconfig"; sourceTree = "<group>"; };
 		6717B3E5538EBEAE1AF1358E /* Pods-whatsUpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUpTests/Pods-whatsUpTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C220F9486B0A7DC4CEEB6DB /* Pods-whatsUp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whatsUp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whatsUp/Pods-whatsUp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				587CD36A1DFF823400B6D9E7 /* MapKit.framework in Frameworks */,
 				15F5CBD4D781F4DEE9933157 /* libPods-whatsUp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,31 +149,19 @@
 				149FD95C1DE2431500CB1808 /* LogInViewController.m */,
 				149FD95E1DE2434200CB1808 /* SignInViewController.h */,
 				149FD95F1DE2434200CB1808 /* SignInViewController.m */,
-<<<<<<< HEAD
 				1481D2231DFA97AC00EB74C1 /* PeopleViewController.h */,
 				1481D2241DFA97AC00EB74C1 /* PeopleViewController.m */,
-=======
-				14EAF1FE1DDE400A00874D28 /* Main.storyboard */,
-				587CD3741DFF866C00B6D9E7 /* CreateCheckInViewController.h */,
-				587CD3751DFF866C00B6D9E7 /* CreateCheckInViewController.m */,
->>>>>>> whatsUp/master
 				14AF0EE51DF511CF00226F54 /* FriendViewController.h */,
 				14AF0EE61DF511CF00226F54 /* FriendViewController.m */,
 				1450FC9D1DFF220200565590 /* Main.storyboard */,
 				14A8918C1DF6070500E4DEC6 /* User.h */,
 				14A8918D1DF6070500E4DEC6 /* User.m */,
-				587CD36B1DFF827400B6D9E7 /* CheckIn.h */,
-				587CD36C1DFF827400B6D9E7 /* CheckIn.m */,
 				149B26631DE27215000DEDF0 /* MapsViewController.h */,
 				149B26641DE27215000DEDF0 /* MapsViewController.m */,
-				587CD36E1DFF837700B6D9E7 /* ImageViewController.h */,
-				587CD36F1DFF837700B6D9E7 /* ImageViewController.m */,
-				587CD3711DFF838400B6D9E7 /* URLViewController.h */,
-				587CD3721DFF838400B6D9E7 /* URLViewController.m */,
 				14EAF2011DDE400A00874D28 /* Assets.xcassets */,
 				14EAF2031DDE400A00874D28 /* LaunchScreen.storyboard */,
 				14EAF2061DDE400A00874D28 /* Info.plist */,
-				587CD3671DFF806400B6D9E7 /* GoogleService-Info.plist */,
+				14C215171DE3B22F00D6B116 /* GoogleService-Info.plist */,
 				14EAF1F51DDE400A00874D28 /* Supporting Files */,
 			);
 			path = whatsUp;
@@ -218,7 +191,6 @@
 		CA7BD28DE14A0D2F56E6054A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				587CD3691DFF823400B6D9E7 /* MapKit.framework */,
 				BF20F41E0EBC4A7AF4CEDDE4 /* libPods-whatsUp.a */,
 				30ECC6EE88C2B39C368B6D0F /* libPods-whatsUpTests.a */,
 				16DDE26851D55512F7EA9BEF /* libPods-whatsUpUITests.a */,
@@ -342,12 +314,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				14EAF2051DDE400A00874D28 /* LaunchScreen.storyboard in Resources */,
-<<<<<<< HEAD
 				1450FC9F1DFF220200565590 /* Main.storyboard in Resources */,
 				14C215181DE3B22F00D6B116 /* GoogleService-Info.plist in Resources */,
-=======
-				587CD3681DFF806400B6D9E7 /* GoogleService-Info.plist in Resources */,
->>>>>>> whatsUp/master
 				14EAF2021DDE400A00874D28 /* Assets.xcassets in Resources */,
 				1450FC9C1DFE0E2900565590 /* organ_music.mp3 in Resources */,
 			);
@@ -512,8 +480,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				587CD3761DFF866C00B6D9E7 /* CreateCheckInViewController.m in Sources */,
-				587CD3701DFF837700B6D9E7 /* ImageViewController.m in Sources */,
 				14A8918E1DF6070500E4DEC6 /* User.m in Sources */,
 				149FD9601DE2434200CB1808 /* SignInViewController.m in Sources */,
 				149FD95D1DE2431500CB1808 /* LogInViewController.m in Sources */,
@@ -522,9 +488,7 @@
 				14EAF1FA1DDE400A00874D28 /* AppDelegate.m in Sources */,
 				14AF0EE71DF511CF00226F54 /* FriendViewController.m in Sources */,
 				14EAF1F71DDE400A00874D28 /* main.m in Sources */,
-				587CD36D1DFF827400B6D9E7 /* CheckIn.m in Sources */,
 				149B26651DE27215000DEDF0 /* MapsViewController.m in Sources */,
-				587CD3731DFF838400B6D9E7 /* URLViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

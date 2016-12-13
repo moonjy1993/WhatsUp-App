@@ -1,111 +1,45 @@
-#import "MapsViewController.h"
-#import <MapKit/MapKit.h>
-#import "CheckIn.h"
-#import "ImageViewController.h"
+//
+//  MapsViewController.m
+//  whatsUp
+//
+//  Created by Ashley on 11/20/16.
+//  Copyright © 2016 NYU. All rights reserved.
+//
 
+#import "MapsViewController.h"
+#import <GoogleMaps/GoogleMaps.h>
 @import Firebase;
 
+@interface MapsViewController ()
 
-@interface MapsViewController () <MKMapViewDelegate>
-@property (weak, nonatomic) IBOutlet MKMapView *mapView;
-
-@property (nonatomic, strong) NSMutableArray *checkInByUsers; // of Photo
-@property (nonatomic,strong) NSMutableArray *mapAnnotations;
-@property (nonatomic, strong) ImageViewController *imageViewController; // can be nil
 @end
 
 @implementation MapsViewController
-
--(NSMutableArray*)checkInByUsers{
-    if(!_checkInByUsers){
-        [CheckIn CheckInitiated];
-        _checkInByUsers= [CheckIn getArray];
-    }
-    return _checkInByUsers;
     
-}
-
-- (void)setMapView:(MKMapView *)mapView
-{
-    _mapView = mapView;
-    self.mapView.delegate = self;
-    
-    
-    [self updateMapViewAnnotations];
-    
-}
-
-- (void)updateMapViewAnnotations
-{/*
-  MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-  
-  CLLocationCoordinate2D co;
-  co.latitude=40.730610;
-  co.longitude= -73.935242;
-  point.coordinate = co;
-  point.title = @"Where am I?";
-  point.subtitle = @"I'm here!!!";
-  
-  [self.mapView addAnnotation:point];
-  */
-    
-    [self.mapView removeAnnotations:self.mapView.annotations];
-    [self.mapView addAnnotations:self.checkInByUsers];
-    [self.mapView showAnnotations:self.checkInByUsers animated:YES];
-    
-    /*  if (self.imageViewController) {
-     //    CheckIn *autoselectedPhoto = [self.checkInByUsers firstObject];
-     if (autoselectedPhoto) {
-     [self.mapView selectAnnotation:autoselectedPhoto animated:YES];
-     [self prepareViewController:self.imageViewController
-     forSegue:nil
-     toShowAnnotation:autoselectedPhoto];
-     }
-     }*/
-}
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
-{
-    static NSString *reuseId = @"MapsViewController";
-    MKAnnotationView *view = [mapView dequeueReusableAnnotationViewWithIdentifier:reuseId];
-    if (!view) {
-        view = [[MKPinAnnotationView alloc] initWithAnnotation:annotation
-                                               reuseIdentifier:reuseId];
-        view.canShowCallout = YES;
-        if (!self.imageViewController) {
-            UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 46, 46)];
-            view.leftCalloutAccessoryView = imageView;
-            UIButton *disclosureButton = [[UIButton alloc] init];
-            [disclosureButton setBackgroundImage:[UIImage imageNamed:@"disclosure"] forState:UIControlStateNormal];
-            [disclosureButton sizeToFit];
-            view.rightCalloutAccessoryView = disclosureButton;
-        }
-    }
-    
-    view.annotation = annotation;
-    [self updateLeftCalloutAccessoryViewInAnnotationView:view];
-    return view;
-}
-- (void)updateLeftCalloutAccessoryViewInAnnotationView:(MKAnnotationView *)annotationView
-{
-    UIImageView *imageView = nil;
-    if ([annotationView.leftCalloutAccessoryView isKindOfClass:[UIImageView class]]) {
-        imageView = (UIImageView *)annotationView.leftCalloutAccessoryView;
-    }
-    if (imageView) {
-        CheckIn *checkin = nil;
-        if ([annotationView.annotation isKindOfClass:[CheckIn class]]) {
-            checkin = (CheckIn *)annotationView.annotation;
-        }
-        if (checkin) {
-#warning Blocking main queue!
-            imageView.image = [UIImage imageNamed:checkin.Image];
-        }
-    }
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view insertSubview:_mapView atIndex:0];
     
+  //  [self.navigationController.navigationBar setFrame:CGRectMake(0, 0, self.view.frame.size.width,100.0)];
+    // Do any additional setup after loading the view.
+    //Feel free to change this, I just needed to make sure the buttons can be on top of the map view
+    CLLocationManager *locationManager = [[CLLocationManager alloc] init];
+    locationManager.distanceFilter = kCLDistanceFilterNone;
+    
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+    
+    //Get the longitude and latitude
+    double lat = locationManager.location.coordinate.latitude;
+    double lon = locationManager.location.coordinate.longitude;
+    
+    //CLLocation *myLocation = [[CLLocation alloc] initWithLatitude:lat longitude:lon];
+    
+    //Specifies center and zoom level of map
+    GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:lat longitude:lon zoom: 11.5];
+    
+    GMSMapView *mapView = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
+    mapView.myLocationEnabled = YES;
+    [self.view insertSubview:mapView atIndex:0]; //Set the view controller's view to the map. Its at index 0, so the buttons can be on top of the map
 }
 
 
@@ -134,13 +68,13 @@
 
 
 /*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end
