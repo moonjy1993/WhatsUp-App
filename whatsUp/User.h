@@ -11,9 +11,11 @@
 @interface User : NSObject
 @property(strong, nonatomic) NSString *name;
 @property(strong, nonatomic) NSString *email;
+@property(strong, nonatomic) NSMutableArray *friends;
 @property(strong, nonatomic) NSDictionary<NSString *, NSString *> *people;
 
 -(instancetype)initWithName:(NSString *)name
-                   andEmail:(NSString *)email;
+                   andEmail:(NSString *)email
+                 andFriends:(NSMutableArray *) friends;
 
 @end
