@@ -70,18 +70,14 @@
     
         //Store the snapshot value into the dicitionary
         NSDictionary *dict = snapshot.value;
-        NSLog(@"%@", dict);
         _user = [[User alloc] init];
         
         //The information is separated into name and email in user
         [_user setValuesForKeysWithDictionary:dict];
         
-        NSLog(@"%@", _user.friends);
-        
         //The user is stored into the array
         [_users addObject: _user];
         
-
         //Reloads the table
         dispatch_async(dispatch_get_main_queue(),^{
             self.tableView.reloadData;

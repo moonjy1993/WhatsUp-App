@@ -13,13 +13,11 @@
 //This is the user class. Stores the name and email property for each user. 
 
 -(instancetype)initWithName:(NSString *)name
-                   andEmail:(NSString *)email
-                 andFriends:(NSMutableArray *) friends{
+                   andEmail:(NSString *)email{
     self = [super init];
     if(self){
         self.name = name;
         self.email = email;
-        self.friends = friends;
     }
     return self;
 }

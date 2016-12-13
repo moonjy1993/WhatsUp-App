@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "whatsUp/User.m"
-            timestampString = "503353992.313234"
+            timestampString = "503281391.725201"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "-initWithName:andEmail:andFriends:"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "-initWithName:andEmail:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
