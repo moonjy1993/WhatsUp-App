@@ -18,7 +18,7 @@
     
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    /*
   //  [self.navigationController.navigationBar setFrame:CGRectMake(0, 0, self.view.frame.size.width,100.0)];
     // Do any additional setup after loading the view.
     //Feel free to change this, I just needed to make sure the buttons can be on top of the map view
@@ -39,7 +39,7 @@
     
     GMSMapView *mapView = [GMSMapView mapWithFrame:self.view.bounds camera:camera];
     mapView.myLocationEnabled = YES;
-    [self.view insertSubview:mapView atIndex:0]; //Set the view controller's view to the map. Its at index 0, so the buttons can be on top of the map
+    [self.view insertSubview:mapView atIndex:0]; //Set the view controller's view to the map. Its at index 0, so the buttons can be on top of the map*/
 }
 
 

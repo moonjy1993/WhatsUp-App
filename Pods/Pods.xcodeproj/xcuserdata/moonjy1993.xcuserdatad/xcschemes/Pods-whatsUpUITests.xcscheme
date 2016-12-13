@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "743D3EF26DC71DB11465D8747728879B"
-               BuildableName = "Pods_whatsUpUITests.framework"
+               BlueprintIdentifier = "1EEBB2F12B76CD08E67F5F6ED5E733A2"
+               BuildableName = "libPods-whatsUpUITests.a"
                BlueprintName = "Pods-whatsUpUITests"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "743D3EF26DC71DB11465D8747728879B"
-            BuildableName = "Pods_whatsUpUITests.framework"
+            BlueprintIdentifier = "1EEBB2F12B76CD08E67F5F6ED5E733A2"
+            BuildableName = "libPods-whatsUpUITests.a"
             BlueprintName = "Pods-whatsUpUITests"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
